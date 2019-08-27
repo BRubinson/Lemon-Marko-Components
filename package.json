@@ -3,6 +3,7 @@
   "description": "Demo of how to build an app using marko-starter",
   "version": "1.0.0",
   "dependencies": {
+    "lasso-stylus": "^2.0.0",
     "marko": "^4.13.10",
     "marko-starter": "^2.0.4"
   },
