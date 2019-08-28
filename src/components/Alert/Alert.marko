@@ -1,0 +1,26 @@
+$ {
+    const baseClass = 'lem-alert';
+
+    const {variant, renderBody, dismissable, show, closeLabel} = input;
+
+
+    const classes = [
+        baseClass,
+        input.class||'',
+        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
+
+    ];
+
+    const defaults = {
+    }
+    const userSupplied = {
+    }
+
+}
+
+div ...defaults ...userSupplied class=classes
+    ${renderBody}
+    if(dismissable)
+        Button.lem-alert-dismiss-button variant=variant text 
+            Icon name='close'
+

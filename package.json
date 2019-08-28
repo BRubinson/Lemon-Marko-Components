@@ -5,7 +5,8 @@
   "dependencies": {
     "lasso-stylus": "^2.0.0",
     "marko": "^4.13.10",
-    "marko-starter": "^2.0.4"
+    "marko-starter": "^2.0.4",
+    "material-design-icons": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^5.9.0",

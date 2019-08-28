@@ -1,0 +1,30 @@
+$ {
+    const baseClass = 'lem-button';
+
+    const {variant , renderBody, disabled, type, outline, size, block, text} = input;
+
+
+    const classes = [
+        baseClass,
+        input.class || '',
+        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
+        (!!outline && `${baseClass}--outline` ),
+        (!!block && `${baseClass}--block`),
+        (text && `${baseClass}--text`)
+    ];
+
+    const defaults = {
+        disabled: false,
+        type: 'button',  
+    }
+    const userSupplied = {
+        disabled,
+        type
+    }
+
+
+}
+
+button ...defaults ...userSupplied class=classes
+    span.lem-button-label 
+        ${renderBody}

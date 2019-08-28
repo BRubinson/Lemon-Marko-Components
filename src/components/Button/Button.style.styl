@@ -1,0 +1,98 @@
+.lem-button {
+    background-color:inherit;
+    box-shadow: none;
+    border-radius: baseBorderRadius;
+    border: none
+    margin:none
+}
+
+.lem-button-label {
+    font-size: 16px
+    }
+.lem-button--block{
+    width:100%;
+    }
+
+
+lem-button-variant(color, accent){
+    background-color: color
+    color: accent
+    border: 1px solid color;
+    &:disabled {
+        background-color: lighten(color, baseLightenAmount)
+        border-color: lighten(color, baseLightenAmount)
+        }
+    &:active:not(:disabled) {
+        background-color: darken(color, baseDarkenAmount/2)
+        }
+    &.lem-button--outline {
+        lem-button--outline(color, accent);
+        }
+    &.lem-button--text {
+        background-color: inherit
+        border: none
+        color:color
+        &:active:not(:disabled) {
+            background-color: inherit;
+            background-image:
+                radial-gradient(
+                circle closest-side,
+                lighten(color, baseLightenAmount*2),
+                rgba(0,0,0,0)
+                );
+
+            }
+        }
+}
+
+lem-button--outline(color, accent){
+    background-color: inherit;
+    color: color
+     &:disabled {
+        color: lighten(color, baseLightenAmount)
+        }
+     &:hover:not(:disabled) {
+         background-color: color
+         color: accent
+         }
+}
+
+/** Variant Specificities*/
+.lem-button-variant--primary 
+{
+    lem-button-variant(colorPrimary, white)
+}
+
+.lem-button-variant--secondary 
+{
+
+    lem-button-variant(colorSecondary,white)
+}
+
+.lem-button-variant--success 
+{
+
+    lem-button-variant(colorSuccess,white)
+}
+
+.lem-button-variant--danger 
+{
+    lem-button-variant(colorDanger, white)
+}
+
+.lem-button-variant--warning 
+{
+    lem-button-variant(colorWarning, black)
+}
+.lem-button-variant--info 
+{
+    lem-button-variant(colorInfo,white)
+}
+.lem-button-variant--light 
+{
+    lem-button-variant(colorLight,black)
+}
+.lem-button-variant--dark 
+{
+    lem-button-variant(colorDark,white)
+}

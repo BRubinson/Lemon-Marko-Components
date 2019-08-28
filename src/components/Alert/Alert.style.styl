@@ -1,0 +1,76 @@
+.lem-alert {
+    position: relative
+    border-radius: baseBorderRadius
+    padding: basePadding
+
+
+    h1,h2,h3,h4,h5,h6,p {
+        padding: 0;
+        margin: 0;
+    }
+    }
+
+.lem-alert-dismiss-button {
+    position: absolute
+    top: 0
+    right: 0
+    }
+
+
+lem-alert-variant(color, textColor){
+    background-color: lighten(color,alertBackgroundLighten)
+    color: textColor
+    border: 1px solid color;
+
+    a {
+         color: darken(textColor, alertTextDarken)
+         font-weight: bold
+    }
+    hr {
+         border-color:  lighten(color,alertBackgroundLighten/2)
+         border-bottom: none
+         border-left: none
+         border-right: none
+    }
+}
+
+
+/** Variant Specificities*/
+.lem-alert-variant--primary 
+{
+    lem-alert-variant(colorPrimary, darken(colorPrimary, alertTextDarken))
+}
+
+.lem-alert-variant--secondary 
+{
+
+    lem-alert-variant(colorSecondary,darken(colorSecondary, alertTextDarken))
+}
+
+.lem-alert-variant--success 
+{
+
+    lem-alert-variant(colorSuccess,darken(colorSuccess, alertTextDarken))
+}
+
+.lem-alert-variant--danger 
+{
+    lem-alert-variant(colorDanger, darken(colorDanger, alertTextDarken))
+}
+
+.lem-alert-variant--warning 
+{
+    lem-alert-variant(colorWarning, darken(colorWarning, alertTextDarken))
+}
+.lem-alert-variant--info 
+{
+    lem-alert-variant(colorInfo,darken(colorInfo, alertTextDarken))
+}
+.lem-alert-variant--light 
+{
+    lem-alert-variant(colorLight,darken(colorLight, alertTextDarken))
+}
+.lem-alert-variant--dark 
+{
+    lem-alert-variant(colorDark,darken(colorDark, alertTextDarken))
+}
