@@ -1,0 +1,25 @@
+.lem-button-group {
+    display: inline-block
+    margin: 0
+    padding: 0
+
+    &>.lem-button:not(:last-child){
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        }
+    &>.lem-button:not(:first-child){
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        border-left:none
+        }
+}
+
+.lem-button-group--block {
+    display: flex
+    flex-direction: row
+    align-items:stretch
+    flex-basis: 100%
+    &>.lem-button {
+        flex: 1
+    }
+    }

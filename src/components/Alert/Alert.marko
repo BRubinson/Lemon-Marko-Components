@@ -3,14 +3,16 @@ $ {
 
     const {variant, renderBody, dismissable, show, closeLabel} = input;
 
+    const shouldHide = typeof(show) !== 'undefined' && !show
+
+    // if (shouldHide && this.state.started)
 
     const classes = [
         baseClass,
         input.class||'',
         (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
-
+        (shouldHide && `${baseClass}--hidden`)
     ];
-
     const defaults = {
     }
     const userSupplied = {
@@ -21,6 +23,6 @@ $ {
 div ...defaults ...userSupplied class=classes
     ${renderBody}
     if(dismissable)
-        Button.lem-alert-dismiss-button variant=variant text 
+        Button.lem-alert-dismiss-button variant=variant text on-click('handleCloseButtonClick')
             Icon name='close'
 

@@ -1,16 +1,18 @@
 $ {
     const baseClass = 'lem-button';
 
-    const {variant , renderBody, disabled, type, outline, size, block, text} = input;
+    const {variant , renderBody, disabled, type, outline, size, block, Icon, text} = input;
 
 
     const classes = [
         baseClass,
         input.class || '',
-        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
+        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}-default`),
         (!!outline && `${baseClass}--outline` ),
         (!!block && `${baseClass}--block`),
-        (text && `${baseClass}--text`)
+        (text && `${baseClass}--text`),
+        (!!Icon && `${baseClass}--icon`),
+        (!!Icon && !renderBody && `${baseClass}--icon-only`)
     ];
 
     const defaults = {
@@ -21,10 +23,11 @@ $ {
         disabled,
         type
     }
-
-
 }
 
-button ...defaults ...userSupplied class=classes
+button ...defaults ...userSupplied class=classes onClick('handleClick')
+    if(!!Icon)
+        span.lem-button-icon
+            Icon ...Icon
     span.lem-button-label 
         ${renderBody}

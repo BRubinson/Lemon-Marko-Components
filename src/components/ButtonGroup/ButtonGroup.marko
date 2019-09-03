@@ -1,0 +1,26 @@
+$ {
+    const baseClass = 'lem-button-group';
+
+    const {renderBody, block} = input;
+
+
+    const classes = [
+        baseClass,
+        input.class || '',
+        (!!block && `${baseClass}--block`)
+        // (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
+        // (!!outline && `${baseClass}--outline` ),
+        // (!!block && `${baseClass}--block`),
+        // (text && `${baseClass}--text`)
+    ];
+
+    const defaults = {
+    }
+    const userSupplied = {
+    }
+
+
+}
+
+div ...defaults ...userSupplied class=classes
+    ${renderBody}

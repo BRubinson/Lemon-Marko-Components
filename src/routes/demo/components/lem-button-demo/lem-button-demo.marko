@@ -29,13 +29,23 @@ section.demo-section
     Button variant='info' outline -- Info
     Button variant='light' outline -- Light
     Button variant='dark' outline -- Dark
-
+h3 -- Icon
+section.demo-section
+    Button variant='success' -- Success
+        @Icon name='check_circle'
+    Button variant='danger' -- Danger
+        @Icon name='error'
+    Button variant='warning' -- Warning
+        @Icon name='warning'
+    hr
+    Button variant='success' outline -- Success
+        @Icon name='check_circle_outline'
+    Button variant='danger' outline -- Danger
+        @Icon name='error_outline'
+    Button variant='warning' outline -- Warning
+        @Icon name='warning'
 h3 -- Disabled
 section.demo-section
-    Button variant='primary' disabled -- Primary
-    Button variant='secondary' disabled -- Secondary
-    Button variant='success' disabled -- Success
-    Button variant='danger' disabled -- Danger
     Button variant='warning' disabled -- Warning
     Button variant='info' disabled -- Info
     Button variant='light' disabled -- Light
@@ -46,17 +56,33 @@ section.demo-section
     Button variant='success' outline disabled -- Success
     Button variant='danger' outline disabled -- Danger
     Button variant='warning' outline disabled -- Warning
-    Button variant='info' outline disabled -- Info
-    Button variant='light' outline disabled -- Light
-    Button variant='dark' outline disabled -- Dark
+
 h3 -- Size
 section.demo-section
-    Button variant='secondary' size='sm'  -- small
-    Button variant='primary' size='md' -- default/medium
-    Button variant='secondary' size='lg'  -- large
+    Button variant='success' -- Success
+    Button variant='danger' -- Danger
+    Button variant='warning' -- Warning
+    hr
+    Button variant='success' outline -- Success
+    Button variant='danger' outline -- Danger
+    Button variant='warning' outline -- Warning
 
 h3 -- Block
 section.demo-section
     Button variant='secondary' size='sm' block  -- small
     Button variant='primary' size='md' block -- default/medium
     Button variant='secondary' size='lg' block  -- large
+h3 -- Button Group
+section.demo-section
+    ButtonGroup
+        Button variant='secondary'    -- Left
+        Button variant='primary'  -- Center
+        Button variant='secondary'   -- Right
+    ButtonGroup
+        Button variant='secondary' outline    -- Left
+        Button variant='primary' outline -- Center
+        Button variant='secondary' outline   -- Right
+    ButtonGroup block
+        Button variant='secondary' outline    -- Left
+        Button variant='primary' outline -- Center
+        Button variant='secondary' outline   -- Right
