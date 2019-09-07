@@ -3,25 +3,41 @@ style {
         margin-bottom: 20px !important
     }
 }
+class {
+    handleClick(data) {
+        console.log(data)
+    }
+    handleItemClick(data) {
+        console.log(data) 
+    }
+}
 h3 -- Dropdowns
 section.demo-section.extra-demo-marg-bot
-    DropdownButton -- Click me
-       @Menu
-            -- what
-    Dropdown show variant='primary' -- Click me
-        @Menu
-            -- one
+    DropdownButton on-item-click('handleItemClick') -- Click me
+        @Item item-click=()=>{console.log('hi')}
+            -- One
+        @Item
+            -- Two
+        @Item
+            -- Three
+    Dropdown on-item-click('handleItemClick') show variant='primary' -- Click me
+        @Item
+            -- One
+        @Item
+            -- Two
+        @Item
+            -- Three
     Dropdown show variant='secondary' outline -- Click me
-        @Menu
+        @Item
             -- one
     ButtonGroup
-        Dropdown  variant='success' -- Click me
-            @Menu
+        DropdownButton  variant='success' -- Click me
+            @Item
                 -- one
-        Dropdown  variant='warning' outline -- Click me
-            @Menu
+        DropdownButton  variant='warning' outline -- Click me
+            @Item
                 -- one
-        Dropdown  variant='danger' -- Click me
-            @Menu
+        DropdownButton  variant='danger' -- Click me
+            @Item
                 -- one
     

@@ -1,7 +1,7 @@
 $ {
     const baseClass = 'lem-dropdown';
 
-    const {show, variant , disabled, type, outline, size, block, text, renderBody, Menu, Trigger} = input;
+    const {show, variant , disabled, type, outline, size, block, text, renderBody,Items, Trigger} = input;
 
     const useButton = !!renderBody && !Trigger
     const classes = [
@@ -28,12 +28,17 @@ $ {
         block,
         text
     }
+    if(Items)
+        console.log(Items)
 }
-div class=classes
+div class=classes onBlur('handleBlur')
     if(useButton)
         Button ...defaults ...userSupplied on-click('handleClick')
             ${renderBody}
             @Icon name='arrow_drop_down'
 
-    div.lem-dropdown-content-container style = {'display':(show ? 'block' : 'none')}
-        ${Menu.renderBody}
+    div.lem-dropdown-menu style = {'display':(show ? 'flex' : 'none')}
+        if(Items)
+            for|item| of=Items
+                div.lem-dropdown-menu-item onClick('handleMenuItemClick',item['item-click']) tabindex=0
+                    ${item.renderBody}

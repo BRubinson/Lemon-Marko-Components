@@ -2805,10 +2805,48 @@ marko-starter@^2.0.4:
     routes-table "^1.2.1"
     try-require "^1.2.1"
 
-marko@^4.1.1, marko@^4.10.0, marko@^4.12.3, marko@^4.13.10:
+marko@^4.1.1, marko@^4.10.0, marko@^4.12.3:
   version "4.18.12"
   resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.12.tgz#0bfeb3b490f41911ea219c9cd415f132d5d787f2"
   integrity sha512-Jo/bpR8kLIqrOtmb8D2KQ1AE//BGa2kmQi1rYb4YvGbjX151c9Xrv8tGTtpv4EsnT/qX/FkKT469YOp1OmAXgw==
+  dependencies:
+    app-module-path "^2.2.0"
+    argly "^1.0.0"
+    browser-refresh-client "^1.0.0"
+    camelcase "^5.0.0"
+    char-props "~0.1.5"
+    complain "^1.6.0"
+    deresolve "^1.1.2"
+    escodegen "^1.8.1"
+    esprima "^4.0.0"
+    estraverse "^4.2.0"
+    events "^1.0.2"
+    events-light "^1.0.0"
+    he "^1.1.0"
+    htmljs-parser "^2.6.7"
+    lasso-caching-fs "^1.0.1"
+    lasso-modules-client "^2.0.4"
+    lasso-package-root "^1.0.1"
+    listener-tracker "^2.0.0"
+    minimatch "^3.0.2"
+    object-assign "^4.1.0"
+    property-handlers "^1.0.0"
+    raptor-json "^1.0.1"
+    raptor-polyfill "^1.0.0"
+    raptor-promises "^1.0.1"
+    raptor-regexp "^1.0.0"
+    raptor-util "^3.2.0"
+    resolve-from "^2.0.0"
+    shorthash "0.0.2"
+    simple-sha1 "^2.1.0"
+    strip-json-comments "^2.0.1"
+    try-require "^1.2.1"
+    warp10 "^2.0.1"
+
+marko@^4.18.10:
+  version "4.18.13"
+  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.13.tgz#3c108e46bd33d0d3e01bfa79619abf4a13f7d814"
+  integrity sha512-1sFI4yfbOXxY/48lgunZgpoiOd86ZGuO42bshBiZqlkmcumlznnHknbBPKtq+CLq+LTXL2apW/XlUSWqAe09Rw==
   dependencies:
     app-module-path "^2.2.0"
     argly "^1.0.0"

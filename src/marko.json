@@ -1,0 +1,29 @@
+{
+    "taglib-id": "marko-lemo-components",
+    "tags-dir": "components",
+
+    "tags": {
+        "Alert": {
+
+        },
+        "Button":{
+
+        },
+        "ButtonGroup":{
+
+        },
+        "Dropdown":{
+
+        },
+        "DropdownButton":{
+
+        },
+        "Icon":{
+
+        }
+    },
+
+    "attributes": {
+
+    }
+}

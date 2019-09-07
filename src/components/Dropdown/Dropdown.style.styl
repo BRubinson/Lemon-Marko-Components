@@ -3,13 +3,31 @@
     position: relative
     }
 
-.lem-dropdown-content-container {
+.lem-dropdown-menu{
     position: absolute
+    display: flex
+    flex-direction: column
+    
+    overflow:hidden
+
     background-color: white
     border: 1px solid #999
+    border-radius: baseBorderRadius
     min-width: 70%
     color: black
 
-    top: 75%
-    left: 75%
+    top: 85%
+    left: 45%
+    z-index: 1000
+    }
+
+.lem-dropdown-menu-item {
+    text-align: center
+    padding: basePadding
+    &:not(:last-child) {
+        border-bottom: 1px solid #ccc
+        }
+    &:hover {
+        background-color: yellow
+        }
     }
