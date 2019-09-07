@@ -1,0 +1,13 @@
+{
+   "@Items <Item>[]":{
+       "@label":"string",
+       "@item-click":"function"
+   },
+   "attributes": {
+    "show":"boolean",
+    "variant":"string",
+    "outline":"boolean",
+    "*":"*"
+   }
+    
+}

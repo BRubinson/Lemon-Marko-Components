@@ -1,0 +1,29 @@
+$ {
+    const baseClass = 'lem-dropdown-button';
+
+    const {show, variant , disabled, type, outline, size, block, text, renderBody, Items} = input;
+    const classes = [
+        baseClass,
+        input.class || ''
+    ];
+
+    const defaults = {
+        disabled: false,
+        type: 'button',  
+    }
+    const userSupplied = {
+        variant,
+        disabled,
+        type,
+        outline,
+        size,
+        block,
+        text,
+        renderBody,
+        Items
+    }
+    const shouldShow = state.show
+}
+
+
+Dropdown ...userSupplied show=shouldShow on-click('handleClick') on-item-click('handleItemClick')
