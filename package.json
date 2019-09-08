@@ -34,5 +34,5 @@
   },
   "private": true,
   "static-repo":"git@github.com:BRubinson/Lemon-Marko-Components.git#gh-pages",
-  "base-url":"/Lemon-Marko-Components"
+  "base url":"/Lemon-Marko-Components"
 }
