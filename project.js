@@ -20,7 +20,7 @@ module.exports = marko_starter.projectConfig({
       {
         plugin: 'lasso-stylus',
         config: {
-            includes: [path.join(__dirname, 'src/stylus/mixins/'),path.join(__dirname,'src/components/**/*')],
+            includes: [path.join(__dirname, './src/stylus/mixins/'),path.join(__dirname,'./src/components/**/*')],
             use: function(stylus) {
                 stylus.define('add', function(a, b) {
                     a = parseFloat(a);
@@ -36,7 +36,7 @@ module.exports = marko_starter.projectConfig({
                 }
             },
             imports: [
-                path.join(__dirname, 'src/stylus/variables.styl')
+                path.join(__dirname, './src/stylus/variables.styl')
             ]
         }
     }
