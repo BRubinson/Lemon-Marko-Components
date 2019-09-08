@@ -1,2 +1,39 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-icon',
+            class:'',
+
+            variant: 'default',
+            rotation: 'up',
+
+            renderBody: undefined
+        }
+
+    const rotationMap= {
+        up: 0,
+        right: 90,
+        down: 180,
+        left: 270,
+    }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, name, rotation, variant, renderBody, ...props} = input;
+    delete props.class
+    const classes = [
+        'material-icons',
+        baseClass,
+        input.class,
+        `${baseClass}-variant--${variant}`,
+    ];
+    const iconStyle = {
+        transform : `rotate(${rotationMap[rotation]}deg)`
+    }
+    const componentProps = {
+        ...props
+    }
+}
+
 link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-i class='material-icons' -- ${input.name}
+i ...componentProps style=iconStyle class=classes -- ${name}

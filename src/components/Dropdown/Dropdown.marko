@@ -1,40 +1,51 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+        baseClass:'lem-dropdown',
+        class:'',
+
+        variant: 'default',
+        outline: false,
+        text: false,
+        size: 'md',
+        fullWidth: false,
+        show: false,
+
+        disabled: false,
+
+        type: 'button',
+
+        Items: [],
+        Trigger: {
+            renderBody: undefined
+        },
+        renderBody: false
+    }
+}
 $ {
-    const baseClass = 'lem-dropdown';
-
-    const {show, variant , disabled, type, outline, size, block, text, renderBody,Items, Trigger} = input;
-
-    const useButton = !!renderBody && !Trigger
+    _.defaults(input,defaultProps)
+    const {baseClass, variant, outline, text, size, fullWidth, disabled, show, type, Items, Trigger, renderBody, ...props} = input;
+    delete props.class
+    const useButton = !Trigger.renderBody
     const classes = [
         baseClass,
-        input.class || '',
-        // (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
-        // (!!outline && `${baseClass}--outline` ),
-        // (!!block && `${baseClass}--block`),
-        // (text && `${baseClass}--text`),
-        // (!!Icon && `${baseClass}--icon`),
-        // (!!Icon && !renderBody && `${baseClass}--icon-only`)
+        input.class || ''
     ];
 
-    const defaults = {
-        disabled: false,
-        type: 'button',  
-    }
     const userSupplied = {
         variant,
+        outline,
+        text,
+        size,
+        fullWidth,
         disabled,
         type,
-        outline,
-        size,
-        block,
-        text
+        renderBody
     }
-    if(Items)
-        console.log(Items)
 }
 div class=classes onBlur('handleBlur')
     if(useButton)
-        Button ...defaults ...userSupplied on-click('handleClick')
-            ${renderBody}
+        Button ...userSupplied on-click('handleClick')
             @Icon name='arrow_drop_down'
 
     div.lem-dropdown-menu style = {'display':(show ? 'flex' : 'none')}

@@ -1,17 +1,30 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-alert',
+            class:'',
+
+            variant: 'default',
+            dismissable: false,
+
+            show: true,
+
+            closeLabel: 'close',
+
+            renderBody: undefined
+        }
+}
 $ {
-    const baseClass = 'lem-alert';
+    _.defaults(input,defaultProps)
 
-    const {variant, renderBody, dismissable, show, closeLabel} = input;
-
-    const shouldHide = typeof(show) !== 'undefined' && !show
-
-    // if (shouldHide && this.state.started)
+    const {baseClass, variant, dismissable, show, closeLabel, renderBody, ...props} = input;
+    delete props.class
 
     const classes = [
         baseClass,
         input.class||'',
-        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}--primary`),
-        (shouldHide && `${baseClass}--hidden`)
+        `${baseClass}-variant--${variant}`,
+        (!show && `${baseClass}--hidden`)
     ];
     const defaults = {
     }

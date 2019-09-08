@@ -1,29 +1,50 @@
-$ {
-    const baseClass = 'lem-dropdown-button';
+import _ from 'underscore'
+static {
+    const defaultProps = {
+        baseClass:'lem-split-button',
+        class:'',
 
-    const {show, variant , disabled, type, outline, size, block, text, renderBody, Items} = input;
+        variant: 'default',
+        outline: false,
+        text: false,
+        size: 'md',
+        fullWidth: false,
+
+        disabled: false,
+
+        type: 'button',
+
+        Items: [],
+        renderBody: false
+    }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, variant, outline, text, size, fullWidth, disabled, Items, renderBody, ...props} = input;
+    delete props.class
     const classes = [
         baseClass,
         input.class || ''
     ];
-
-    const defaults = {
-        disabled: false,
-        type: 'button',  
-    }
-    const userSupplied = {
+    
+    const bothProps = {
         variant,
-        disabled,
-        type,
         outline,
-        size,
-        block,
         text,
-        renderBody,
-        Items
+        size,
+        fullWidth,
+        disabled
     }
-    const shouldShow = state.show
+    const buttonProps = {
+        ...bothProps,
+        renderBody
+    }
+    const dropdownProps = {
+        ...bothProps,
+        Items,
+    }
 }
 
-
-Dropdown ...userSupplied show=shouldShow on-click('handleClick') on-item-click('handleItemClick')
+ButtonGroup class=classes fullWidth=fullWidth
+    Button ...buttonProps 
+    DropdownButton ...dropdownProps on-item-click('handleItemClick')

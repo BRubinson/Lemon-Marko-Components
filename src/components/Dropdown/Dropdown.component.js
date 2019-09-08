@@ -13,6 +13,5 @@ module.exports = class {
         })
     }
     handleBlur() {
-        console.log('blurbed')
     }
 }

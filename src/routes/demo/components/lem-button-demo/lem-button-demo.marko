@@ -39,11 +39,11 @@ section.demo-section
         @Icon name='warning'
     hr
     Button variant='success' outline -- Success
-        @Icon name='check_circle_outline'
+        @Icon name='check_circle_outline' rotation='right'
     Button variant='danger' outline -- Danger
-        @Icon name='error_outline'
+        @Icon name='error_outline' rotation='down'
     Button variant='warning' outline -- Warning
-        @Icon name='warning'
+        @Icon name='warning' rotation='left'
 h3 -- Disabled
 section.demo-section
     Button variant='warning' disabled -- Warning
@@ -67,11 +67,11 @@ section.demo-section
     Button variant='danger' outline -- Danger
     Button variant='warning' outline -- Warning
 
-h3 -- Block
+h3 -- FullWidth
 section.demo-section
-    Button variant='secondary' size='sm' block  -- small
-    Button variant='primary' size='md' block -- default/medium
-    Button variant='secondary' size='lg' block  -- large
+    Button variant='secondary' size='sm' fullWidth  -- small
+    Button variant='primary' size='md' fullWidth -- default/medium
+    Button variant='secondary' size='lg' fullWidth  -- large
 h3 -- Button Group
 section.demo-section
     ButtonGroup
@@ -82,7 +82,7 @@ section.demo-section
         Button variant='secondary' outline    -- Left
         Button variant='primary' outline -- Center
         Button variant='secondary' outline   -- Right
-    ButtonGroup block
+    ButtonGroup fullWidth
         Button variant='secondary' outline    -- Left
         Button variant='primary' outline -- Center
         Button variant='secondary' outline   -- Right

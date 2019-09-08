@@ -1,0 +1,11 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@variant":"string",
+    "@dismissable":"boolean",
+
+    "@show":"boolean",
+    
+    "@closeLabel":"string"
+}

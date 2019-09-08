@@ -1,8 +1,20 @@
 path = require('path');
 const isProduction = process.env.NODE_ENV === 'production';
-module.exports = require("marko-starter").projectConfig({
-  name: "Lemon Marko Demo", // Optional, but added here for demo purposes
+marko_starter = require("marko-starter")
+module.exports = marko_starter.projectConfig({
+  name: "Lemon Marko Demo", // Optional, but added here for demo purposes,
   lassoConfig: {
+    require: {transforms: [
+        {
+            transform: 'lasso-babel-transform',
+            config: {
+                extensions: ['.js','.es6','.marko'],
+                babelOptions: {
+                    presets:['@babel/preset-env']
+                }
+            }
+        }
+    ]},
     plugins: [
       'lasso-marko',
       {

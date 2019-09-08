@@ -1,4 +1,4 @@
-{
+{   
     "@baseClass":"string",
     "@class":"string",
 
@@ -12,8 +12,9 @@
 
     "@type":"string",
 
-    "@Items <Item>[]":{
+    "@Icon <Icon>":{
         "@label":"string",
-        "@item-click":"function"
+        "@name":"string",
+        "@rotation":"number"
     }
 }

@@ -11,13 +11,17 @@
 }
 
 .lem-button-icon{
-    padding: 0
     padding-right: basePadding
+    &:only-child {
+        padding: inherit
+        padding-left:0
+        padding-right:0
     }
+}
 .lem-button-label {
     font-size: 18px
-    }
-.lem-button--block{
+}
+.lem-button--fullWidth{
     width:100%;
     }
 
@@ -66,7 +70,7 @@ lem-button--outline(color, textColor){
          }
 }
 
-.lem-button-default 
+.lem-button-variant--default 
 {
     lem-button-variant(white, black, #999)
 }

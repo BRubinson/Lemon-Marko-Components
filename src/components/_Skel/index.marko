@@ -1,32 +1,27 @@
 import _ from 'underscore'
 static {
     const defaultProps = {
-            baseClass:'lem-button-group',
+            baseClass:'lem-button',
             class:'',
 
             variant: 'default',
-            fullWidth: false,
 
             renderBody: undefined
         }
 }
 $ {
     _.defaults(input,defaultProps)
-    const {baseClass, fullWidth, renderBody, ...props} = input;
+    const {baseClass, variant, renderBody, ...props} = input;
     delete props.class
-
     const classes = [
         baseClass,
-        input.class || '',
-        (fullWidth && `${baseClass}--fullWidth`)
+        input.class,
+        `${baseClass}-variant--${variant}`,
     ];
-
-    const userSupplied = {
+    const componentProps = {
         ...props
     }
-
-
 }
 
-div ...userSupplied class=classes
+div ...componentProps
     ${renderBody}

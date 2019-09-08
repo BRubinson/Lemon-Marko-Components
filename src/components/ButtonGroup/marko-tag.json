@@ -1,0 +1,8 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@variant":"string",
+
+    "@fullWidth":"boolean"
+}

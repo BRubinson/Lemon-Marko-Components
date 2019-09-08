@@ -1,33 +1,48 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-button',
+            class:'',
+
+            variant: 'default',
+            outline: false,
+            text: false,
+            size: 'md',
+            fullWidth: false,
+            disabled: false,
+
+            type: 'button',
+
+            Icon: {
+                name: false
+            },
+            renderBody: false
+        }
+}
 $ {
-    const baseClass = 'lem-button';
-
-    const {variant , renderBody, disabled, type, outline, size, block, Icon, text} = input;
-
-
+    _.defaults(input,defaultProps)
+    const {baseClass, variant, outline, text, size, fullWidth, disabled, type, Icon, renderBody, ...props} = input;
+    delete props.class
     const classes = [
         baseClass,
-        input.class || '',
-        (!!variant ? `${baseClass}-variant--${variant}` : `${baseClass}-default`),
-        (!!outline && `${baseClass}--outline` ),
-        (!!block && `${baseClass}--block`),
+        input.class,
+        `${baseClass}-variant--${variant}`,
+        (outline && `${baseClass}--outline` ),
+        (fullWidth && `${baseClass}--fullWidth`),
         (text && `${baseClass}--text`),
-        (!!Icon && `${baseClass}--icon`),
-        (!!Icon && !renderBody && `${baseClass}--icon-only`)
+        (Icon.name && `${baseClass}--icon`)
     ];
-
-    const defaults = {
-        disabled: false,
-        type: 'button',  
-    }
-    const userSupplied = {
+    const buttonProps = {
         disabled,
-        type
+        type,
+        ...props
     }
 }
 
-button ...defaults ...userSupplied class=classes onClick('handleClick')
-    if(!!Icon)
+button ...buttonProps class=classes onClick('handleClick')
+    if(Icon.name)
         span.lem-button-icon
             Icon ...Icon
-    span.lem-button-label 
-        ${renderBody}
+    if(renderBody)
+        span.lem-button-label 
+            ${renderBody}

@@ -1,29 +1,33 @@
-$ {
-    const baseClass = 'lem-dropdown-button';
+import _ from 'underscore'
+static {
+    const defaultProps = {
+        baseClass:'lem-dropdown-button',
+        class:'',
 
-    const {show, variant , disabled, type, outline, size, block, text, renderBody, Items} = input;
+        variant: 'default',
+        outline: false,
+        text: false,
+        size: 'md',
+        fullWidth: false,
+
+        disabled: false,
+
+        type: 'button',
+
+        Items: [],
+        renderBody: false
+    }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, ...props} = input;
+    delete props.class
     const classes = [
         baseClass,
         input.class || ''
     ];
-
-    const defaults = {
-        disabled: false,
-        type: 'button',  
-    }
-    const userSupplied = {
-        variant,
-        disabled,
-        type,
-        outline,
-        size,
-        block,
-        text,
-        renderBody,
-        Items
-    }
     const shouldShow = state.show
 }
 
 
-Dropdown ...userSupplied show=shouldShow on-click('handleClick') on-item-click('handleItemClick')
+Dropdown ...props class=classes show=shouldShow on-click('handleClick') on-item-click('handleItemClick')

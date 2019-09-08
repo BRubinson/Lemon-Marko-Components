@@ -41,3 +41,23 @@ section.demo-section.extra-demo-marg-bot
             @Item
                 -- one
     
+h3 -- SplitButtons
+section.demo-section.extra-demo-marg-bot
+    SplitButton on-item-click('handleItemClick') -- Click me
+        @Item item-click=()=>{console.log('hi')}
+            -- One
+        @Item
+            -- Two
+        @Item
+            -- Three
+    SplitButton on-item-click('handleItemClick') variant='primary' -- Click me
+        @Item
+            -- One
+        @Item
+            -- Two
+        @Item
+            -- Three
+    SplitButton variant='secondary' outline -- Click me
+        @Item
+            -- one
+    

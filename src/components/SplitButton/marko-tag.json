@@ -1,13 +1,19 @@
 {
-   "@Items <Item>[]":{
-       "@label":"string",
-       "@item-click":"function"
-   },
-   "attributes": {
-    "show":"boolean",
-    "variant":"string",
-    "outline":"boolean",
-    "*":"*"
-   }
-    
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@variant":"string",
+    "@outline":"boolean",
+    "@text":"boolean",
+    "@size":"string",
+    "@fullWidth":"boolean",
+
+    "@disabled":"boolean",
+
+    "@type":"string",
+
+    "@Items <Item>[]":{
+        "@label":"string",
+        "@item-click":"function"
+    }
 }
