@@ -1,7 +1,7 @@
 {
   "name": "marko-lemon",
-  "description": "Demo of how to build an app using marko-starter",
-  "version": "1.0.0",
+  "description": "Markojs Component Library",
+  "version": "0.0.1",
   "dependencies": {
     "@babel/core": "^7.6.0",
     "lasso-babel-transform": "^3.0.0",
@@ -19,11 +19,11 @@
     "marko-prettyprint": "^1.5.2",
     "prettier": "^1.15.2"
   },
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marko-js-samples/marko-starter-demo"
+    "url": "https://github.com/BRubinson/Lemon-Marko-Components"
   },
+  "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production marko-starter build",
     "format": "prettier src/**/*.{js,css,less} --write && marko-prettyprint src",
@@ -32,5 +32,6 @@
     "start": "marko-starter server",
     "test": "npm run lint"
   },
-  "private": true
+  "private": true,
+  "static-repo":"git@github.com:BRubinson/Lemon-Marko-Components.git#demo-site"
 }
