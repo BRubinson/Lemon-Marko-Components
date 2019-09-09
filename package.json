@@ -30,7 +30,8 @@
     "lint": "eslint src",
     "serve": "NODE_ENV=production marko-starter serve-static",
     "start": "marko-starter server",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "gh":"./buildGHdemo.sh"
   },
   "private": true,
   "static-repo":"git@github.com:BRubinson/Lemon-Marko-Components.git#gh-pages",
