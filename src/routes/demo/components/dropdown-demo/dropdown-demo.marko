@@ -23,17 +23,17 @@ Grid
         @Col
             h3 -- Dropdown Buttons
             section.demo-section
-                DropdownButton on-item-click('handleItemClick') -- Closed
+                DropdownButton on-item-click('handleItemClick') -- Click Me
                     @Item item-click=()=>{console.log('hi')}
                         -- Item
                     @Item
                         -- Item
-                DropdownButton on-item-click('handleItemClick') variant='primary' -- Open
+                DropdownButton on-item-click('handleItemClick') variant='primary' -- Click Me
                     @Item
                         -- one
                     @Item
                         -- two
-                DropdownButton variant='secondary' outline -- Open
+                DropdownButton variant='secondary' outline -- Click Me
                     @Item
                         -- Item
                     @Item
@@ -41,21 +41,21 @@ Grid
         @Col
             h3 -- Split Buttons
             section.demo-section
-                SplitButton on-item-click('handleItemClick') -- Click me
+                SplitButton on-item-click('handleItemClick') -- Click Me
                     @Item item-click=()=>{console.log('hi')}
                         -- One
                     @Item
                         -- Two
                     @Item
                         -- Three
-                SplitButton on-item-click('handleItemClick') variant='primary' -- Click me
+                SplitButton on-item-click('handleItemClick') variant='primary' -- Click Me
                     @Item
                         -- One
                     @Item
                         -- Two
                     @Item
                         -- Three
-                SplitButton variant='secondary' outline -- Click me
+                SplitButton variant='secondary' outline -- Click Me
                     @Item
                         -- one
     

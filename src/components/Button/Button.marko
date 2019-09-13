@@ -27,10 +27,12 @@ $ {
         baseClass,
         input.class,
         `${baseClass}-variant--${variant}`,
+        `${baseClass}-${size}`,
         (outline && `${baseClass}--outline` ),
         (fullWidth && `${baseClass}--fullWidth`),
         (text && `${baseClass}--text`),
         (Icon.name && `${baseClass}--icon`)
+
     ];
     const buttonProps = {
         disabled,
