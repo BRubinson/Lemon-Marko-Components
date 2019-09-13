@@ -14,5 +14,6 @@ rm -rf ./docs/index.html && mv ./docs/demo/index.html ./docs/index.html
 echo "fixing paths"
 sed -i '' 's/src=\"\/demo/src=\".\/demo/g' ./docs/index.html
 sed -i '' 's/href=\"\/demo/href=\".\/demo/g' ./docs/index.html
+sed -i '' 's/src=\"\/logo/src=\".\/logo/g' ./docs/index.html
 # mv ./docs/*demo* ./docs/demo/
 echo "Done!"
