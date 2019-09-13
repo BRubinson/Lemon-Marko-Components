@@ -2,9 +2,9 @@ class {
     onCreate() {
         this.state = { 
             firstOpen: true,
-            seccondOpen: false,
+            seccondOpen: true,
             thirdOpen: true,
-            fourthOpen: false,
+            fourthOpen: true,
         }
     }
     handleOnClose(stateVarName){
@@ -15,40 +15,44 @@ class {
         this.state[stateVarName] = true
     }
 }
-
-h3 -- Dismissable
-Alert variant='primary' dismissable show=state.firstOpen on-close('handleOnClose','firstOpen')
-    h1 -- Demo Alert
-    p -- Some text here in the paragragh 
-        a href=null -- a link here too 
-        hr
-        -- yup
-if(!state.firstOpen)
-    Button variant='primary' on-click('handleOnShow','firstOpen') -- Show Alert
-hr
-Alert variant='success' dismissable show=state.seccondOpen on-close('handleOnClose','seccondOpen')
-    h3 -- Demo Alert
-    p -- Some text here in the paragragh 
-        a href=null -- a link here too 
-        hr
-        -- yup
-if(!state.seccondOpen)
-    Button variant='success' on-click('handleOnShow','seccondOpen') -- Show Alert
-hr
-Alert variant='danger' dismissable show=state.thirdOpen on-close('handleOnClose','thirdOpen')
-    h4 -- Demo Alert
-    p -- Some text here in the paragragh 
-        a href=null -- a link here too 
-        hr
-        -- yup
-if(!state.thirdOpen)
-    Button variant='danger' on-click('handleOnShow','thirdOpen') -- Show Alert
-hr
-Alert variant='warning' dismissable show=state.fourthOpen on-close('handleOnClose','fourthOpen')
-    h5 -- Demo Alert
-    p -- Some text here in the paragragh 
-        a href=null -- a link here too 
-        hr
-        -- yup
-if(!state.fourthOpen)
-    Button variant='warning' on-click('handleOnShow','fourthOpen') -- Show Alert
+Grid
+    @Row
+        @Col
+            h3 -- Dismissable
+    @Row
+        @Col
+            Alert variant='primary' dismissable show=state.firstOpen on-close('handleOnClose','firstOpen')
+                h2 -- Demo Alert
+                p -- Some text here in the paragragh 
+                    a href=null -- a link here too 
+                    hr
+                    -- yup
+            if(!state.firstOpen)
+                Button variant='primary' on-click('handleOnShow','firstOpen') -- Show Alert
+        @Col
+            Alert variant='success' dismissable show=state.seccondOpen on-close('handleOnClose','seccondOpen')
+                h2 -- Demo Alert
+                p -- Some text here in the paragragh 
+                    a href=null -- a link here too 
+                    hr
+                    -- yup
+            if(!state.seccondOpen)
+                Button variant='success' on-click('handleOnShow','seccondOpen') -- Show Alert
+        @Col
+            Alert variant='danger' dismissable show=state.thirdOpen on-close('handleOnClose','thirdOpen')
+                h2 -- Demo Alert
+                p -- Some text here in the paragragh 
+                    a href=null -- a link here too 
+                    hr
+                    -- yup
+            if(!state.thirdOpen)
+                Button variant='danger' on-click('handleOnShow','thirdOpen') -- Show Alert
+        @Col
+            Alert variant='warning' dismissable show=state.fourthOpen on-close('handleOnClose','fourthOpen')
+                h2 -- Demo Alert
+                p -- Some text here in the paragragh 
+                    a href=null -- a link here too 
+                    hr
+                    -- yup
+            if(!state.fourthOpen)
+                Button variant='warning' on-click('handleOnShow','fourthOpen') -- Show Alert
