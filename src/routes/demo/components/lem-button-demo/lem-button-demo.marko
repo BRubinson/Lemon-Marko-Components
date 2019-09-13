@@ -1,88 +1,97 @@
 style {
-    .demo-section> *{
-        
-            margin-right: 8px;
-            margin-bottom: 8px;
-        
+.demo-section> *{
+        margin-right: 10px;
+        margin-bottom:10px;
+
     }
 }
-
 h1 -- Button
-h3 -- Variants
-section.demo-section
-    Button variant='primary' -- Primary
-    Button variant='secondary' -- Secondary
-    Button variant='success' -- Success
-    Button variant='danger' -- Danger
-    Button variant='warning' -- Warning
-    Button variant='info' -- Info
-    Button variant='light' -- Light
-    Button variant='dark' -- Dark
+Grid
+    @Row
+        @Col
+            h3 -- Variants
+            section.demo-section
+                Button variant='primary' -- Primary
+                Button variant='secondary' -- Secondary
+                Button variant='success' -- Success
+                Button variant='danger' -- Danger
+                Button variant='warning' -- Warning
+                Button variant='info' -- Info
+                Button variant='light' -- Light
+                Button variant='dark' -- Dark
+        @Col
+            h3 -- Outline
+            section.demo-section
+                Button variant='primary' outline -- Primary
+                Button variant='secondary' outline -- Secondary
+                Button variant='success' outline -- Success
+                Button variant='danger' outline -- Danger
+                Button variant='warning' outline -- Warning
+                Button variant='info' outline -- Info
+                Button variant='light' outline -- Light
+                Button variant='dark' outline -- Dark
+        @Col
+            h3 -- Disabled
+            section.demo-section
+                Button variant='primary' outline disabled -- Primary
+                Button variant='secondary' outline disabled -- Secondary
+                Button variant='success' outline disabled -- Success
+                Button variant='danger' outline disabled -- Danger
+                Button variant='warning' outline disabled -- Warning
+                Button variant='warning' disabled -- Warning
+                Button variant='info' disabled -- Info
+                Button variant='light' disabled -- Light
+                Button variant='dark' disabled -- Dark
+    @Row
+        @Col
+            h3 -- Icon
+            section.demo-section
+                Button variant='success' -- Success
+                    @Icon name='check_circle'
+                Button variant='danger' -- Danger
+                    @Icon name='error'
+                Button variant='warning' -- Warning
+                    @Icon name='warning'
+                Button variant='success' outline -- Success
+                    @Icon name='check_circle_outline' rotation='right'
+                Button variant='danger' outline -- Danger
+                    @Icon name='error_outline' rotation='down'
+                Button variant='warning' outline -- Warning
+                    @Icon name='warning' rotation='left'
+        @Col
 
-h3 -- Outline
-section.demo-section
-    Button variant='primary' outline -- Primary
-    Button variant='secondary' outline -- Secondary
-    Button variant='success' outline -- Success
-    Button variant='danger' outline -- Danger
-    Button variant='warning' outline -- Warning
-    Button variant='info' outline -- Info
-    Button variant='light' outline -- Light
-    Button variant='dark' outline -- Dark
-h3 -- Icon
-section.demo-section
-    Button variant='success' -- Success
-        @Icon name='check_circle'
-    Button variant='danger' -- Danger
-        @Icon name='error'
-    Button variant='warning' -- Warning
-        @Icon name='warning'
-    hr
-    Button variant='success' outline -- Success
-        @Icon name='check_circle_outline' rotation='right'
-    Button variant='danger' outline -- Danger
-        @Icon name='error_outline' rotation='down'
-    Button variant='warning' outline -- Warning
-        @Icon name='warning' rotation='left'
-h3 -- Disabled
-section.demo-section
-    Button variant='warning' disabled -- Warning
-    Button variant='info' disabled -- Info
-    Button variant='light' disabled -- Light
-    Button variant='dark' disabled -- Dark
+            h3 -- FullWidth
+            section.demo-section
+                Button variant='secondary' size='sm' fullWidth  -- small
+                Button variant='primary' size='md' fullWidth -- default/medium
+                Button variant='secondary' size='lg' fullWidth  -- large
+        @Col
 
-    Button variant='primary' outline disabled -- Primary
-    Button variant='secondary' outline disabled -- Secondary
-    Button variant='success' outline disabled -- Success
-    Button variant='danger' outline disabled -- Danger
-    Button variant='warning' outline disabled -- Warning
-
-h3 -- Size
-section.demo-section
-    Button variant='success' -- Success
-    Button variant='danger' -- Danger
-    Button variant='warning' -- Warning
-    hr
-    Button variant='success' outline -- Success
-    Button variant='danger' outline -- Danger
-    Button variant='warning' outline -- Warning
-
-h3 -- FullWidth
-section.demo-section
-    Button variant='secondary' size='sm' fullWidth  -- small
-    Button variant='primary' size='md' fullWidth -- default/medium
-    Button variant='secondary' size='lg' fullWidth  -- large
-h3 -- Button Group
-section.demo-section
-    ButtonGroup
-        Button variant='secondary'    -- Left
-        Button variant='primary'  -- Center
-        Button variant='secondary'   -- Right
-    ButtonGroup
-        Button variant='secondary' outline    -- Left
-        Button variant='primary' outline -- Center
-        Button variant='secondary' outline   -- Right
-    ButtonGroup fullWidth
-        Button variant='secondary' outline    -- Left
-        Button variant='primary' outline -- Center
-        Button variant='secondary' outline   -- Right
+            h3 -- Size
+            section.demo-section
+                Button variant='success' -- Success
+                Button variant='danger' -- Danger
+                Button variant='warning' -- Warning
+                Button variant='success' outline -- Success
+                Button variant='danger' outline -- Danger
+                Button variant='warning' outline -- Warning
+    @Row
+        @Col
+            h3 -- Button Group
+    @Row
+        @Col
+            section.demo-section
+                ButtonGroup
+                    Button variant='secondary'    -- Left
+                    Button variant='primary'  -- Center
+                    Button variant='secondary'   -- Right
+        @Col
+            ButtonGroup
+                Button variant='secondary' outline    -- Left
+                Button variant='primary' outline -- Center
+                Button variant='secondary' outline   -- Right
+        @Col
+            ButtonGroup fullWidth
+                Button variant='secondary' outline    -- Left
+                Button variant='primary' outline -- Center
+                Button variant='secondary' outline   -- Right

@@ -1,0 +1,11 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@Rows <Row>[]":{
+        "@label":"string",
+        "@Columns <Col>[]":{  
+        "@label":"string"
+        }
+    }
+}

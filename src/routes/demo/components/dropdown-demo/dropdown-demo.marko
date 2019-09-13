@@ -1,8 +1,3 @@
-style {
-    .extra-demo-marg-bot > * {
-        margin-bottom: 20px !important
-    }
-}
 class {
     handleClick(data) {
         console.log(data)
@@ -11,53 +6,56 @@ class {
         console.log(data) 
     }
 }
-h3 -- Dropdowns
-section.demo-section.extra-demo-marg-bot
-    DropdownButton on-item-click('handleItemClick') -- Click me
-        @Item item-click=()=>{console.log('hi')}
-            -- One
-        @Item
-            -- Two
-        @Item
-            -- Three
-    Dropdown on-item-click('handleItemClick') show variant='primary' -- Click me
-        @Item
-            -- One
-        @Item
-            -- Two
-        @Item
-            -- Three
-    Dropdown show variant='secondary' outline -- Click me
-        @Item
-            -- one
-    ButtonGroup
-        DropdownButton  variant='success' -- Click me
-            @Item
-                -- one
-        DropdownButton  variant='warning' outline -- Click me
-            @Item
-                -- one
-        DropdownButton  variant='danger' -- Click me
-            @Item
-                -- one
-    
-h3 -- SplitButtons
-section.demo-section.extra-demo-marg-bot
-    SplitButton on-item-click('handleItemClick') -- Click me
-        @Item item-click=()=>{console.log('hi')}
-            -- One
-        @Item
-            -- Two
-        @Item
-            -- Three
-    SplitButton on-item-click('handleItemClick') variant='primary' -- Click me
-        @Item
-            -- One
-        @Item
-            -- Two
-        @Item
-            -- Three
-    SplitButton variant='secondary' outline -- Click me
-        @Item
-            -- one
+Grid
+    @Row
+        @Col
+            h3 -- Controlled Dropdowns
+            section.demo-section
+                Dropdown on-item-click('handleItemClick') -- Closed
+                    @Item item-click=()=>{console.log('hi')}
+                        -- Item
+                Dropdown on-item-click('handleItemClick') show variant='primary' -- Open
+                    @Item
+                        -- one
+                Dropdown show variant='secondary' outline -- Open
+                    @Item
+                        -- Item
+        @Col
+            h3 -- Dropdown Buttons
+            section.demo-section
+                DropdownButton on-item-click('handleItemClick') -- Closed
+                    @Item item-click=()=>{console.log('hi')}
+                        -- Item
+                    @Item
+                        -- Item
+                DropdownButton on-item-click('handleItemClick') variant='primary' -- Open
+                    @Item
+                        -- one
+                    @Item
+                        -- two
+                DropdownButton variant='secondary' outline -- Open
+                    @Item
+                        -- Item
+                    @Item
+                        -- Item
+        @Col
+            h3 -- Split Buttons
+            section.demo-section
+                SplitButton on-item-click('handleItemClick') -- Click me
+                    @Item item-click=()=>{console.log('hi')}
+                        -- One
+                    @Item
+                        -- Two
+                    @Item
+                        -- Three
+                SplitButton on-item-click('handleItemClick') variant='primary' -- Click me
+                    @Item
+                        -- One
+                    @Item
+                        -- Two
+                    @Item
+                        -- Three
+                SplitButton variant='secondary' outline -- Click me
+                    @Item
+                        -- one
     

@@ -1,0 +1,37 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-grid',
+            class:'',
+
+            Rows: [],
+        }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, Rows, ...props} = input;
+    delete props.class
+    const classes = [
+        baseClass,
+        input.class,
+    ];
+    const componentProps = {
+        ...props
+    }
+
+    const rowProps = {
+        "class":["lem-grid-row"]
+    }
+
+    const colProps = {
+        "class":["lem-grid-col"]
+    }
+
+}
+
+div ...componentProps class = classes
+    for|Row,index| of=Rows
+        div ...rowProps
+            for|Col,index| of=Row.Columns
+                div ...colProps
+                    ${Col.renderBody}
