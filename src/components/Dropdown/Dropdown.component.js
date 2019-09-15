@@ -14,4 +14,7 @@ module.exports = class {
     }
     handleBlur() {
     }
+    handleKeyDown(event){
+        code = event.code || null
+    }
 }

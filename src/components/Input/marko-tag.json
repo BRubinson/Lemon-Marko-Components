@@ -1,0 +1,6 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@variant":"string"
+}

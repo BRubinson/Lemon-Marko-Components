@@ -1,0 +1,27 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-button',
+            class:'',
+
+            variant: 'default',
+
+            renderBody: undefined
+        }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, variant, renderBody, ...props} = input;
+    delete props.class
+    const classes = [
+        baseClass,
+        input.class,
+        `${baseClass}-variant--${variant}`,
+    ];
+    const componentProps = {
+        ...props
+    }
+}
+
+div ...componentProps class = classes
+    ${renderBody}
