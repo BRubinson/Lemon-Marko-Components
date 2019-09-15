@@ -1,7 +1,7 @@
 # Lemon Component Library
 This is a UI Components library similar to material-ui/bootstrap for Markojs
 
-# [Demo-Page](https://brubinson.github.io/Lemon-Marko-Components/).
+# [Demo-Page](https://brubinson.github.io/Lemon-Marko-Components/)
 
 ## Install
 
@@ -69,24 +69,69 @@ Button variant='success' -- Success
 
 ### ButtonGroup
 
-Learn to create routes and use route parameters.
+Groups buttons together as a single toolbar
+
+TODO:
+- props passing down to buttons
+
+```
+ButtonGroup fullWidth
+    Button variant='default'  size='md'    -- Default
+    Button variant='default'  size='md' -- Default
+    Button variant='default'  size='md'  -- Default
+```
 
 ### Dropdown
 
-Learn how to use styles within a component and how to use resources (like images) in a component.
+A controlledd Dropdown component with customizable triggers
+
+TODO:
+- custom triggers
+- menu a11y
+
+```
+Dropdown on-item-click('handleItemClick') show variant='primary' -- Open
+    @Item
+        -- one
+```
 
 ### DropdownButton
 
-Learn how to use styles within a component and how to use resources (like images) in a component.
+A Statefull dropdown with a button trigger
+
+```
+DropdownButton on-item-click('handleItemClick') variant='primary' -- Click Me
+    @Item
+        -- one
+    @Item
+        -- two
+```
 
 ### SplitButton
 
-Learn how to use styles within a component and how to use resources (like images) in a component.
+A Button combined with a DropdownButton appended at the end
 
-### TextField
+```
+SplitButton on-item-click('handleItemClick') variant='primary' -- Click Me
+    @Item
+        -- One
+    @Item
+        -- Two
+    @Item
+        -- Three
+```
 
-Learn how to use styles within a component and how to use resources (like images) in a component.
+### TextField *WIP*
 
-### Checkbox
+Text input field
 
-Learn to create components that can be passed content and include that content in their own template.
+```
+TextField label='Success input' variant='success' placeholder='Success input' type='text'
+```
+### Checkbox *WIP* 
+
+Checkbox input
+
+```
+Checkbox id='shrek' label='Success input' variant='primary' 
+```
