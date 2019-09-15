@@ -1,0 +1,29 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-checkbox',
+            class:'',
+
+            variant: 'default',
+            renderBody: undefined
+        }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass,label, id, variant, ...props} = input;
+    delete props.class
+    const classes = [
+        baseClass,
+        input.class,
+        `${baseClass}-variant--${variant}`,
+    ];
+    const componentProps = {
+        id,
+        ...props
+    }
+}
+div.lem-checkbox-container
+    input type='checkbox' ...componentProps class = classes onChange('handleChange')
+    if(label)
+        label for=id
+            -- ${label}

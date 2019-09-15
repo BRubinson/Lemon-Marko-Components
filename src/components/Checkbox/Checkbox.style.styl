@@ -1,0 +1,41 @@
+.lem-checkbox-container{
+    display: inline-flex
+    justify-content: center
+    align-content: center
+    } 
+.lem-checkbox {
+    display: inline-block
+    position:relative
+    height: checkbox-base-size
+    width: checkbox-base-size
+    font-size: checkbox-base-size
+    
+    margin: 0 0 0 0
+    border:none
+    border-radius: checkbox-border-radius
+
+    background-color: inherit
+
+    box-shadow:none
+
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:checked:after{
+        content:"\2713"
+        position: absolute
+        left:@width/2
+        line-height: checkbox-base-size
+        }
+}
+lem-checkbox-variant(vid, base, textColor, borderColor, Colorthree){
+    background-color: inherit 
+    border: 1px solid borderColor
+    color: textColor
+    &:checked{
+        background-color: lighten(base, 10%)
+        }
+
+}
+variant-vendor(checkbox-base-class, lem-checkbox-variant)

@@ -1,0 +1,10 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+    "@id":"string",
+    
+    "@label":"string",
+    "@desc":"string",
+    
+    "@variant":"string"
+}
