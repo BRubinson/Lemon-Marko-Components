@@ -1,32 +1,51 @@
-
-/** default color values */
-colorBlue = #007bff
-colorGray = #6c757d
-colorGreen = #28a745
-colorRed = #dc3545
-colorYellow = #ffc107
-colorTeal = #17a2b8
-colorLightGray = #f8f9fa
-colorDarkGray = #343a40
-/** Themeing colors used everywhere else*/
-colorDefault = white
-colorPrimary = colorBlue
-colorSecondary = colorGray 
-colorSuccess = colorGreen 
-colorDanger = colorRed
-colorWarning = colorYellow 
-colorInfo = colorTeal 
-colorLight = colorLightGray
-colorDark = colorDarkGray
+/** Framework vars*/
+// VARIANTS= 'default' 'primary' 'secondary' 'success' 'danger' 'warning' 'info' 'light' 'dark'
+VARIANTS = variant-default variant-primary variant-secondary variant-success variant-danger variant-warning variant-info variant-light variant-dark
+globalIdentifier = 'lem-'
 
 /** Util Variables */
+base-font-size = 18px
 baseBorderRadius = 4px;
+base-border-radius=4px;
 basePadding = 4px;
+base-padding = 4px;
 baseLightenAmount = 66%;
 baseDarkenAmount = 33%;
+
+
 /** Alert Variabled */
 alertTextDarken = 40%
 alertBackgroundLighten = 75%
+
 /** Button Variables */
-buttonBaseHeight = 32px
-buttonPadding = 16px 6px 16px 6px
+button-base-class= globalIdentifier + 'button'
+button-font-size = base-font-size
+buttonBaseHeight=32px
+
+buttonHeightsm = buttonBaseHeight - 8px
+buttonHeightmd = buttonBaseHeight
+buttonHeightLg = buttonBaseHeight + 8px
+
+buttonIconPadding = 6px
+/** Input Variables */
+input-base-class = globalIdentifier + 'input'
+input-base-height = 32px
+input-font-size = base-font-size
+
+input-padding-left = 8px
+
+input-default-border-color= #ccc
+input-default-border= 1px solid input-default-border-color
+input-border-radius = base-border-radius
+
+/** TextField Variables */
+textfield-base-class = globalIdentifier + 'textfield'
+textfield-base-height = 32px
+textfield-padding-vertical = 4px
+textfield-font-size = base-font-size
+textfield-label-font-size = 12px
+textfield-padding-left = 8px
+
+textfield-default-border-color= #ccc
+textfield-default-border= 1px solid textfield-default-border-color
+textfield-border-radius = base-border-radius

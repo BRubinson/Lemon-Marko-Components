@@ -36,7 +36,10 @@ module.exports = marko_starter.projectConfig({
                 }
             },
             imports: [
-                path.join(__dirname, './src/stylus/variables.styl')
+                path.join(__dirname, './src/stylus/variables.styl'),
+                path.join(__dirname, './src/stylus/colors.styl'),
+                path.join(__dirname, './src/stylus/functions.styl'),
+                path.join(__dirname, './src/stylus/vendors.styl')
             ]
         }
     }

@@ -1,0 +1,5 @@
+variant-vendor(baseClass, variantMapper) 
+    for variant in VARIANTS
+        .{baseClass}-variant--{variant[0]} {
+            variantMapper(variant[0],variant[1],variant[2],variant[3],variant[4])
+            }

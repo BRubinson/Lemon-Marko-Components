@@ -10,6 +10,10 @@
 
     top 100% + 5px
     left: 0 
+
+    padding-top: base-padding
+    padding-bottom: base-padding
+    
     min-width: 100%
     max-width: 150%
     overflow:hidden
@@ -27,9 +31,12 @@
     text-align: center
     padding: basePadding
     &:not(:last-child) {
-        border-bottom: 1px solid #ccc
         }
     &:hover {
-        background-color: yellow
+        background-color: #eee
+        }
+    &:active {
+        background-color: colorPrimary 
+        color: white
         }
     }

@@ -1,0 +1,16 @@
+{   
+    "@baseClass":"string",
+    "@class":"string",
+
+    "@variant":"string",
+
+    "@Title <Title>" : {
+        "@label":"string"
+    },
+    "@Description <Description>" : {
+        "@label":"string"
+    },
+    "@Sections <Section>[]": {
+        "@label":"string"
+    }
+}

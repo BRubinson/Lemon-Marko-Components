@@ -1,0 +1,37 @@
+.lem-textfield {
+    display: inline-block
+    position relative
+    min-height: textfield-base-height
+    font-size: textfield-font-size
+    padding-top: textfield-label-font-size
+    
+    border-bottom: textfield-default-border
+    border-top-left-radius: textfield-border-radius
+    border-top-right-radius: textfield-border-radius
+    background:inherit
+    box-shadow:none
+
+    &>.lem-input{
+        padding-left:textfield-padding-left
+    }
+}
+lem-textfield-variant(vid, base, textColor, borderColor, Colorthree){
+    border-color: borderColor
+
+    .lem-textfield-label {
+        position: absolute
+        display: inline-block
+
+        top: 0
+        left: 6px
+
+        font-size: textfield-label-font-size
+        color: borderColor
+
+        background: inherit
+
+        }
+
+
+}
+variant-vendor(textfield-base-class, lem-textfield-variant)

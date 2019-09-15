@@ -2,33 +2,36 @@
     display: inline-flex
     align-items: center
     justify-content: center
-    background-color:inherit;
-    box-shadow: none;
-    border-radius: baseBorderRadius;
-    border: none
+
     margin:0
     padding-top: 0
     padding-bottom: 0
-    min-height: 32px
-    max-height: 32px
+
+    min-height: buttonBaseHeight
+    max-height: buttonBaseHeight
+
     overflow: hidden
 
+    border-radius: baseBorderRadius;
+    border: none
+
+    box-shadow: none;    
 }
 
 .lem-button-sm {
-    min-height: 24px
-    max-height: 24px 
+    min-height: buttonHeightsm
+    max-height: buttonHeightsm
     }
 .lem-button-md {
-    min-height: 32px
-    max-height: 32px 
+    min-height: buttonHeightmd
+    max-height: buttonHeightmdpx 
     }
 .lem-button-lg {
-    min-height: 40px
-    max-height: 40px 
+    min-height: buttonHeightlg
+    max-height: buttonHeightlg 
     }
 .lem-button-icon{
-    padding-right: basePadding
+    padding-right: buttonIconPadding
     &:only-child {
         padding: inherit
         padding-left:0
@@ -36,15 +39,13 @@
     }
 }
 .lem-button-label {
-    font-size: 18px
+    font-size: button-font-size
 }
 .lem-button--fullWidth{
     width:100%;
-    }
+}
 
-
-
-lem-button-variant(color, textColor, borderColor){
+lem-button-variant(vid, color, textColor, borderColor){
     background-color: color
     color: textColor
     border: 1px solid borderColor;
@@ -87,47 +88,4 @@ lem-button--outline(color, textColor){
          }
 }
 
-.lem-button-variant--default 
-{
-    lem-button-variant(white, black, #999)
-}
-
-/** Variant Specificities*/
-.lem-button-variant--primary 
-{
-    lem-button-variant(colorPrimary, white, colorPrimary)
-}
-
-.lem-button-variant--secondary 
-{
-
-    lem-button-variant(colorSecondary,white,colorSecondary)
-}
-
-.lem-button-variant--success 
-{
-
-    lem-button-variant(colorSuccess,white, colorSuccess)
-}
-
-.lem-button-variant--danger 
-{
-    lem-button-variant(colorDanger, white,colorDanger)
-}
-
-.lem-button-variant--warning 
-{
-    lem-button-variant(colorWarning, black, colorWarning)
-}
-.lem-button-variant--info 
-{
-    lem-button-variant(colorInfo,white,colorInfo)
-}
-.lem-button-variant--light 
-{
-    lem-button-variant(colorLight,black,colorLight)
-}
-.lem-button-variant--dark 
-{
-    lem-button-variant(colorDark,white,colorDark)
-}
+variant-vendor(button-base-class, lem-button-variant)

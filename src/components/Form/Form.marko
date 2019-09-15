@@ -1,0 +1,39 @@
+import _ from 'underscore'
+static {
+    const defaultProps = {
+            baseClass:'lem-form',
+            class:'',
+
+            variant: 'default',
+
+            renderBody: undefined,
+            
+            Title:{
+                renderBody:null
+            },
+            Description:{
+                renderBody:null
+            },
+            Sections: []
+        }
+}
+$ {
+    _.defaults(input,defaultProps)
+    const {baseClass, variant, Title,Description,Sections, ...props} = input;
+    delete props.class
+    const classes = [
+        baseClass,
+        input.class,
+        `${baseClass}-variant--${variant}`,
+    ];
+    const componentProps = {
+        ...props
+    }
+}
+
+form ...componentProps class = classes
+    ${Title.renderBody}
+    ${Description.renderBody}
+    for|Section| of=Sections
+        ${Section.renderBody}
+        

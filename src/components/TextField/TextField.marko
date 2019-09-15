@@ -1,7 +1,7 @@
 import _ from 'underscore'
 static {
     const defaultProps = {
-            baseClass:'lem-input',
+            baseClass:'lem-textfield',
             class:'',
 
             variant: 'default',
@@ -19,10 +19,11 @@ $ {
         `${baseClass}-variant--${variant}`,
     ];
     const componentProps = {
+        id,
         ...props
     }
 }
-if(label)
-    label for=id
+div class = classes
+    label.lem-textfield-label for=id
         -- ${label}
-input ...componentProps class = classes id=id onChange('handleChange')
+    Input ...componentProps
