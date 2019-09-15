@@ -1,7 +1,7 @@
 # Lemon Component Library
 This is a UI Components library similar to material-ui/bootstrap for Markojs
 
-#[Demo-Page](https://github.com/marko-js/marko-starter).
+# [Demo-Page](https://brubinson.github.io/Lemon-Marko-Components/).
 
 ## Install
 
@@ -37,15 +37,35 @@ Grid
 
 ### Alert
 
-Change a file and the server will restart and the browser will refresh.  Hot reload is enabled for certain files.
+Eye catching text blocks with variants
+
+```
+Alert variant='primary'
+    h2 -- Demo Alert
+    p -- Some text here 
+        a -- and a link
+```
 
 ### Icon
 
-Learn how to use styles within a component and how to use resources (like images) in a component.
+Material UI Icon wrapper component
+
+```
+Icon name='calendar'
+```
 
 ### Button
 
-See example components and how they can be scoped to pages or the whole site.
+A Button
+
+TODO:
+- Icon Alignment
+
+```
+Button variant='primary' outline -- Primary
+Button variant='success' -- Success
+    @Icon name='check_circle'
+```
 
 ### ButtonGroup
 
